@@ -1,0 +1,390 @@
+
+
+body {
+    background-color: #10141c;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+p {
+    font-size: 20;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: hsl(53deg 100% 50%);
+    font-weight: bold;
+    font-size: 70;
+}
+
+h2 {
+    color: hsl(53deg 100% 50%);
+    font-weight: bolder;
+    font-size: 50;
+}
+
+h3 {
+    color: white;
+    font-weight: bolder;
+    font-size: 30;
+}
+
+.social-media-icons {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 20px;
+    position: fixed;
+    left: 30;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Navigation bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-center;
+    height: 40px;
+    
+}
+
+.menu-button {
+    margin-left: 70px;
+    font-size: 30;
+    color: hsl(53deg 100% 50%);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu a {
+    height: 100%;
+    margin-right: 70px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.nav-menu a:after,
+.nav-menu a:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0px solid transparent;
+}
+
+.nav-menu a:after {
+    width: 0%;
+    height: 80%;
+    border-top: 2px solid hsl(53deg 100% 50%);
+    border-bottom: 2px solid hsl(53deg 100% 50%);
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:before {
+    width: 120%;
+    height: 0%;
+    border-left: 2px solid hsl(53deg 100% 50%);
+    border-right: 2px solid hsl(53deg 100% 50%);
+    transition: all 0.5s ease;
+}
+
+.nav-menu a:hover::before {
+    height: 80%;
+}
+
+.nav-menu a:hover::after {
+    width: 120%;
+}
+
+.nav-menu a:after,
+.nav-menu a:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0px solid transparent;
+    width: 0%;
+    height: 0%;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:after {
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.nav-menu a:before {
+    width: 0%;
+    height: 0%;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.nav-menu a:hover::before,
+.nav-menu a:hover::after {
+    width: 10px;
+    height: 10px;
+    border-color: hsl(53deg 100% 50%);
+}
+
+.nav-menu a:hover {
+    color: hsl(53deg 100% 50%);
+}
+
+/* Button */
+
+.button {
+    color: white;
+    background: none;
+    border-radius: 4px;
+    border: solid white 1px;
+    border-radius: 150px;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.button:hover {
+    background-color: hsl(53deg 100% 50%);
+    border: solid hsl(53deg 100% 50%) 1px;
+}
+  
+.hobby .button {
+    width: 150;
+    margin-top: 20px;
+}
+
+.button span {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 170px auto;
+}
+
+.introduction p {
+    margin-bottom: 20px;
+}
+
+/* About Me Page */
+
+.about-me {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.personal-background {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.personal-background img {
+    margin-left: 100px; 
+}
+
+.academics-career {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 60px;
+}
+
+.academics-career img {
+    margin-right: 100px; 
+}
+
+/* Hobbies Page */
+
+.hobbies {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 70px 150;
+}
+
+.hobbies h1 {
+    text-align: center;
+}
+
+.hobbies-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1;
+    row-gap: 70px;
+    margin-top: 50px;
+}
+
+.hobby {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px white;
+}
+
+.hobby p {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+#soccer-information {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px 40px;
+    margin-bottom: 40px;
+    display: none;
+}
+
+#video-games-information {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px 40px;
+    display: none;
+}
+
+#surf-information {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px 40px;
+    display: none;
+}
+
+.hobby .button {
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 720px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .menu-button {
+        margin: 20px 0;
+        font-size: 30;
+        color: hsl(53deg 100% 50%);
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .nav-menu a {
+        font-size: 30px;
+        height: 100%;
+        margin: 5px 0px;
+        text-decoration: none;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .introduction {
+        margin-top: 250px;
+    }
+
+    .hobbies {
+        margin-top: 250px;
+    }
+
+    .about-me {
+        margin-top: 250px;
+    }
+
+    .hobby p {
+        margin-bottom: 20px;
+    }
+
+    .hobby .button {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .personal-background {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personal-background img {
+        height: 300px;
+        width: 300px;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .academics-career {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .academics-career img {
+        height: 300px;
+        width: 300px;
+        margin-top: 40px;
+        margin-right: 0;
+    }
+}
